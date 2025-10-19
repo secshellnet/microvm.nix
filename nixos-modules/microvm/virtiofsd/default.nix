@@ -63,7 +63,7 @@ in
         );
 
         supervisordConfigFile =
-          pkgs.writeText "${config.networking.hostName}-virtiofsd-supervisord.conf" (
+          pkgs.writeText "${config.networking.fqdn}-virtiofsd-supervisord.conf" (
             lib.generators.toINI {} supervisordConfig
           );
 

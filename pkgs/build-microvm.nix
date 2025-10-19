@@ -54,7 +54,7 @@ writeShellScriptBin "build-microvm" ''
   in self.lib.buildRunner {
     inherit pkgs;
     microvmConfig = {
-      inherit (extended.config.networking) hostName;
+      inherit (extended.config.networking) fqdn;
     } // extended.config.microvm;
     inherit (extended.config.system.build) toplevel;
   }"

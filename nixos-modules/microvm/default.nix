@@ -28,7 +28,7 @@ in
       microvm-lib.buildRunner {
         inherit pkgs;
         microvmConfig = config.microvm // {
-          inherit (config.networking) hostName;
+          inherit (config.networking) fqdn;
           inherit hypervisor;
         };
         inherit (config.system.build) toplevel;
